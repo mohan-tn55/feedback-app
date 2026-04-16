@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --orange: #F97316;
+  --orange-light: #FB923C;
+  --orange-dark: #EA580C;
+  --dark-bg: #1A1A1A;
+  --dark-card: #222222;
+  --dark-border: #333333;
+  --dark-muted: #2E2E2E;
+  --white: #FFFFFF;
+  --gray-text: #9CA3AF;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--white);
+}
+
+.bg-gradient-hero {
+  background: radial-gradient(ellipse at 20% 50%, rgba(249, 115, 22, 0.12) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(249, 115, 22, 0.08) 0%, transparent 50%),
+              #1A1A1A;
+}
+
+.card-glow {
+  box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.15), 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.35), 0 8px 32px rgba(249, 115, 22, 0.1);
+}
+
+.btn-orange {
+  background: linear-gradient(135deg, #F97316, #EA580C);
+  transition: all 0.2s ease;
+}
+
+.btn-orange:hover {
+  background: linear-gradient(135deg, #FB923C, #F97316);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.4);
+}
+
+.btn-orange:active {
+  transform: translateY(0);
+}
+
+.input-style {
+  background: #2A2A2A;
+  border: 1px solid #383838;
+  color: #FFFFFF;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-style:focus {
+  border-color: #F97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+  outline: none;
+}
+
+.input-style::placeholder {
+  color: #5A5A5A;
+}
+
+.feedback-card {
+  background: #222222;
+  border: 1px solid #2E2E2E;
+  transition: all 0.2s ease;
+  animation: slideIn 0.3s ease;
+}
+
+.feedback-card:hover {
+  border-color: rgba(249, 115, 22, 0.3);
+  background: #252525;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tag-badge {
+  background: rgba(249, 115, 22, 0.12);
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  color: #FB923C;
+}
+
+.divider {
+  border-color: #2E2E2E;
+}
+
+.logo-dot {
+  width: 10px;
+  height: 10px;
+  background: #F97316;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
+}
+
+.stat-pill {
+  background: rgba(249, 115, 22, 0.1);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+}
+
+.empty-state-icon {
+  color: #383838;
+}
+
+.char-counter {
+  color: #5A5A5A;
+  font-size: 0.75rem;
+}
+
+.char-counter.warning {
+  color: #F97316;
+}
